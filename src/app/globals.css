@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+  body{
+    @apply m-0 p-0 box-border  text-slate-950;
+  }
+  .text-balance{
+    text-wrap:balance
+  }
+}
+
+@layer components{
+  .links, .cards{
+    transition: .5s ease-in-out;
+  }
+  
+  .icons:hover, .links:hover, .cards:hover{
+    transform: scale(0.9);
+  }
+  
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animate-wiggle {
+    animation: wiggle 1s infinite;
+  }
+  .rounded-logo {
+    border-radius: 20px 0 20px 0;
+  }
+}
+
+
