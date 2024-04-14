@@ -2,29 +2,13 @@
 import Link from "next/link";
 import { useState } from "react";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
-import ImageHelper from "./imageHelper";
-import { data } from "@/utils/data";
 import { SlideRight } from "./slide";
 import { usePathname } from "next/navigation";
+import Navigation from "./navigation";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState<boolean>(false);
-  const { navigation } = data;
   const pathname = usePathname();
-  const navi = navigation.map(({ name, href, src }, index) => (
-    <Link href={href} key={index}>
-      <div
-        className={`${
-          pathname === href && "border-0 border-b-4 border-blue-300"
-        } flex items-center transition-all p-2 gap-1 hover:text-slate-100 icons hover:bg-black dark:hover:bg-white dark:hover:text-black`}
-      >
-        <li>{name}</li>
-        <span>
-          <ImageHelper src={src} alt={name.concat("-logo")} />
-        </span>
-      </div>
-    </Link>
-  ));
 
   return (
     <main className="dark:bg-black dark:text-white">
@@ -40,7 +24,9 @@ export default function Navbar() {
 
         {/* navigation section */}
         <nav>
-          <ul className="hidden md:flex items-center gap-x-5">{navi}</ul>
+          <ul className="hidden md:flex items-center gap-x-5">
+            <Navigation pathname={pathname} />
+          </ul>
         </nav>
 
         {/* toggle icon */}
@@ -57,10 +43,12 @@ export default function Navbar() {
         <div
           className={`${
             toggle ? "flex" : "hidden"
-          } md:hidden transition-all w-[calc(100%-50px)] mx-auto backdrop-blur-md z-50 rounded mb-2 justify-center`}
+          } md:hidden transition-all mx-auto ml-12 backdrop-blur-md z-50 rounded justify-center`}
         >
           <div className="w-full h-full py-5 px-2">
-            <ul onClick={() => setToggle(!toggle)}>{navi}</ul>
+            <ul onClick={() => setToggle(!toggle)}>
+              <Navigation pathname={pathname} />
+            </ul>
           </div>
         </div>
       </SlideRight>

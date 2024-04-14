@@ -10,6 +10,7 @@ import whatsapp from "../../public/images/whatsapp.png";
 import whatsup from "../../public/images/whatsapp(1).png";
 import location from "../../public/images/placeholder.png";
 import phone from "../../public/images/phone-call.png";
+import contactme from "../../public/images/contactme.png"
 import {
   LaptopOutlined,
   BulbOutlined,
@@ -22,17 +23,21 @@ export const whatsAppDefaultMessage: string =
   "Hey there! 🚀 How can I help you ? Looking forward to hearing from you!";
 
 // action type for reducer
-export const CHANGE_INPUT: string = "CHANGE_INPUT";
+export enum ACTION_TRIGGERS{
+  CHANGE_INPUT = "CHANGE_INPUT",
+  CHANGE_ALERT = "CHANGE_ALERT",
+  CHANGE_ERROR = "CHANGE_ERROR"
+}
 
 export const data: DataProps = {
   navigation: [
     { name: "Home", href: "/", src: home },
     { name: "About Me", href: "/about", src: aboutme },
     { name: "Projects", href: "/project", src: project },
-    { name: "Contact Me", href: "/contact", src: project },
+    { name: "Contact Me", href: "/contact", src: contactme },
   ],
   connectSocial: [
-    { name: "Github", href: "https://github.com/mnoureljalil", src: github },
+    { name: "Github", href: "https://github.com/mnourdevs", src: github },
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/mohammed-hassan-a5373b249/",
@@ -105,11 +110,12 @@ export const data: DataProps = {
     },
     {
       name: "Email Me",
-      body: "monourcodes@gmail.com",
-      href: "mailto:monourcodes@gmail.com",
+      body: "mnourcodes@gmail.com",
+      href: "mailto:mnourcodes@gmail.com",
       src: email1,
     },
   ],
 };
 
 export const BASE_URL = `http://localhost:2024/`;
+

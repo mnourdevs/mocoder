@@ -4,9 +4,9 @@ import Button from "./button";
 import { useContactFormHandler } from "@/customHooks/useContactPage";
 
 const ContactForm = () => {
-  const {state, handleChange, handleSubmit} = useContactFormHandler()
+  const { state, handleChange, handleSubmit } = useContactFormHandler();
   return (
-    <form className="w-full" onSubmit={handleSubmit}>
+    <form className="w-full mt-4" onSubmit={handleSubmit}>
       <ContactFormInput
         label="Your name"
         name="name"

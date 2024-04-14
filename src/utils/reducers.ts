@@ -1,21 +1,29 @@
 import { ReducerActionType, ReducerInitialType } from "@/utils/types";
-import { CHANGE_INPUT } from "@/utils/data";
+import { ACTION_TRIGGERS } from "@/utils/data";
 
 export const INITIAL_STATE: ReducerInitialType = {
   name: "",
   email: "",
   message: "",
+  error: "",
 };
 
-export const  reducer = (
+export const reducer = (
   state: ReducerInitialType,
   action: ReducerActionType
 ): ReducerInitialType => {
   switch (action.type) {
-    case CHANGE_INPUT:
+    case ACTION_TRIGGERS["CHANGE_INPUT"]:
+      const { name, value } = action.payload as { name: string; value: string };
       return {
         ...state,
-        [action.payload.name]: action.payload.value,
+        [name]: value,
+      };
+
+    case ACTION_TRIGGERS["CHANGE_ERROR"]:
+      return {
+        ...state,
+        error: action.payload.toString(),
       };
 
     default:

@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
-import { ChangeEvent, ElementType } from "react";
-import { IconType } from "antd/es/notification/interface";
+import { NextRequest, NextResponse } from "next/server";
+import SMTPTransport from "nodemailer/lib/smtp-transport";
+import { ChangeEvent, ElementType, FormEvent } from "react";
 
 export type ImageType = {
   src: StaticImageData;
@@ -28,11 +29,11 @@ export type DataProps = {
     job: string;
     content: string[];
   };
-  footer:{
+  footer: {
     name: string;
     body: string;
-    href:string;
-    src:StaticImageData
+    href: string;
+    src: StaticImageData;
   }[];
   aboutMe: CardProps[];
 };
@@ -40,6 +41,14 @@ export type DataProps = {
 export type ChildrenProps = {
   children: React.ReactNode;
 };
+
+export interface ContactFormInterface {
+  state: ReducerInitialType;
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  handleChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+}
 
 export type ContactFormProps = {
   type: string;
@@ -61,22 +70,30 @@ export type ReducerInitialType = {
   name: string;
   email: string;
   message: string;
+  error: string ;
 };
 
 // type for reducer action
 export type ReducerActionType = {
   type: string;
-  payload: { name: string; value: string };
+  payload: { name: string; value: string } | string;
 };
 
 // type for dark-theme div
 export type DarkThemeProps = {
   children: React.JSX.Element | React.JSX.Element[];
-}
+};
 
 // interface for emails
 export interface EmailTemplateProps {
-  name: string
-  email:string;
-  message:string
+  name: string;
+  email: string;
+  message: string;
+}
+
+export type HandlerProps =  (req: NextRequest) => Promise<NextResponse<SMTPTransport.SentMessageInfo|any>>;
+
+export interface CustomAPIErrorProps {
+  message: string;
+  statusCode: number;
 }
