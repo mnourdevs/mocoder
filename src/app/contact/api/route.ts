@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ReducerInitialType } from "@/utils/types";
-import { sender } from "@/utils/mailer";
 import { controllerWrapper } from "@/utils/serverHelpers";
+import { sender } from "@/lib/email";
 
 export const POST = controllerWrapper(async (req: NextRequest) => {
    const { name, email, message }: ReducerInitialType = await req.json();

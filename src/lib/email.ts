@@ -1,4 +1,4 @@
-import { EmailTemplateProps } from "./types";
+import { EmailTemplateProps } from "@/utils/types";
 import nodemailer from "nodemailer";
 
 const Email = process.env.EMAIL;
