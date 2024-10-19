@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { HandlerProps } from "./types";
+import { CustomAPIErrorProps, HandlerProps } from "./types";
 import { StatusCodes, getReasonPhrase } from "http-status-codes";
 
 export const controllerWrapper = (fn: HandlerProps) => {
@@ -29,17 +29,16 @@ export const controllerWrapper = (fn: HandlerProps) => {
 };
 
 export class CustomAPIError extends Error {
-  public statusCode: number
-  constructor(message:string, statusCode:number){
-    super(message)
-    this.statusCode = statusCode
+  public statusCode: number;
+  constructor({ message, statusCode }: CustomAPIErrorProps) {
+    super(message);
+    this.statusCode = statusCode;
   }
 }
 
 export const createCustomeError = (
-  message:string = getReasonPhrase(StatusCodes.BAD_REQUEST),
-  statusCode:number = StatusCodes.BAD_REQUEST
-):CustomAPIError => {
-
-  return new CustomAPIError(message, statusCode)
-}
+  message: string = getReasonPhrase(StatusCodes.BAD_REQUEST),
+  statusCode: number = StatusCodes.BAD_REQUEST
+): CustomAPIError => {
+  return new CustomAPIError({ message, statusCode });
+};

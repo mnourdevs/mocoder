@@ -1,16 +1,13 @@
-import { SlideRight } from "@/components/slide"
+import { SlideRight } from "@/components/slide";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About Me",
 };
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return (
-    <SlideRight>
-      { children }
-    </SlideRight>
-  )
+  return <SlideRight>{children}</SlideRight>;
 }

@@ -6,8 +6,9 @@ import { INITIAL_STATE, reducer } from "@/utils/reducers";
 import { ACTION_TRIGGERS } from "@/utils/data";
 import { sendContact } from "@/app/actions/postData";
 import { Toaster } from "@/utils/toaster";
+import { UseContactFormReturnInterface } from "@/utils/types";
 
-export const useContactFormHandler = () => {
+export const useContactFormHandler = (): UseContactFormReturnInterface => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
   const router: AppRouterInstance = useRouter();
   const { CHANGE_INPUT, CHANGE_ERROR } = ACTION_TRIGGERS;

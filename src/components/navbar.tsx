@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
-import { SlideRight } from "./slide";
 import { usePathname } from "next/navigation";
 import Navigation from "./navigation";
 
@@ -11,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <main className="dark:bg-black dark:text-white">
+    <main className="dark:bg-black dark:text-white bg-white z-50">
       <div className="flex justify-between items-center md:px-24 py-5 text-xs">
         {/* logo */}
         <section>
@@ -39,19 +38,17 @@ export default function Navbar() {
       </div>
 
       {/* mobile screen */}
-      <SlideRight>
-        <div
-          className={`${
-            toggle ? "flex" : "hidden"
-          } md:hidden transition-all mx-auto ml-12 backdrop-blur-md z-50 rounded justify-center`}
-        >
-          <div className="w-full h-full py-5 px-2">
-            <ul onClick={() => setToggle(!toggle)}>
-              <Navigation pathname={pathname} />
-            </ul>
-          </div>
+      <div
+        className={`${
+          toggle ? "flex" : "hidden"
+        } md:hidden transition-all mx-auto ml-12 backdrop-blur-md z-50 rounded justify-center`}
+      >
+        <div className="w-full h-full py-5 px-2">
+          <ul onClick={() => setToggle(!toggle)}>
+            <Navigation pathname={pathname} />
+          </ul>
         </div>
-      </SlideRight>
+      </div>
     </main>
   );
 }

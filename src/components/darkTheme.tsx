@@ -27,7 +27,7 @@ export const ThemeToggler = () => {
     if (currentTheme === "dark") {
       return <SunFilled onClick={() => setTheme("light")} role="button" />;
     } else {
-      return <MoonFilled onClick={() => setTheme("dark")} role="button"/>;
+      return <MoonFilled onClick={() => setTheme("dark")} role="button" />;
     }
   };
 

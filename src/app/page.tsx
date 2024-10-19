@@ -6,6 +6,7 @@ import software from "../../public/images/web-development(1).png";
 import { data } from "@/utils/data";
 import Underliner from "@/components/underliner";
 
+
 export default function Home() {
   const { name, job, content } = data.home;
   return (

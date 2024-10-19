@@ -10,7 +10,7 @@ import whatsapp from "../../public/images/whatsapp.png";
 import whatsup from "../../public/images/whatsapp(1).png";
 import location from "../../public/images/placeholder.png";
 import phone from "../../public/images/phone-call.png";
-import contactme from "../../public/images/contactme.png"
+import contactme from "../../public/images/contactme.png";
 import {
   LaptopOutlined,
   BulbOutlined,
@@ -23,10 +23,10 @@ export const whatsAppDefaultMessage: string =
   "Hey there! 🚀 How can I help you ? Looking forward to hearing from you!";
 
 // action type for reducer
-export enum ACTION_TRIGGERS{
+export enum ACTION_TRIGGERS {
   CHANGE_INPUT = "CHANGE_INPUT",
   CHANGE_ALERT = "CHANGE_ALERT",
-  CHANGE_ERROR = "CHANGE_ERROR"
+  CHANGE_ERROR = "CHANGE_ERROR",
 }
 
 export const data: DataProps = {
@@ -117,5 +117,24 @@ export const data: DataProps = {
   ],
 };
 
-export const BASE_URL = `http://localhost:2024/`;
+export const keywords: string[] = [
+  "Graphic Design",
+  "Portfolio",
+  "Freelance",
+  "Illustration",
+  "Web Development",
+  "Projects",
+  "Frontend",
+  "Backend",
+  "UX Design",
+  "UI Design",
+  "User Experience",
+  "User Interface",
+  "Sofware Developer",
+  "Sofware Programer",
+  "Fullstack Developer",
+  "Fullstack",
+  "Developer",
+];
 
+export const BASE_URL = `http://localhost:2024/`;

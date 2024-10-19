@@ -13,7 +13,7 @@ const Navigation = ({ pathname }: { pathname: string }) => {
       >
         <li>{name}</li>
         <span>
-          <ImageHelper src={src} alt={name.concat("-logo")} />
+          <ImageHelper src={src} alt={`${name}-logo`} />
         </span>
       </div>
     </Link>

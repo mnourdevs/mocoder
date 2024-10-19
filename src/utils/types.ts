@@ -1,3 +1,5 @@
+import { useContactFormHandler } from "@/customHooks/useContactPage";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { StaticImageData } from "next/image";
 import { NextRequest, NextResponse } from "next/server";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
@@ -70,7 +72,7 @@ export type ReducerInitialType = {
   name: string;
   email: string;
   message: string;
-  error: string ;
+  error: string;
 };
 
 // type for reducer action
@@ -91,9 +93,20 @@ export interface EmailTemplateProps {
   message: string;
 }
 
-export type HandlerProps =  (req: NextRequest) => Promise<NextResponse<SMTPTransport.SentMessageInfo|any>>;
+export type HandlerProps = (
+  req: NextRequest
+) => Promise<NextResponse<SMTPTransport.SentMessageInfo | any>>;
 
 export interface CustomAPIErrorProps {
   message: string;
   statusCode: number;
+}
+
+export interface UseContactFormReturnInterface {
+  state: ReducerInitialType;
+  router: AppRouterInstance;
+  handleChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
 }

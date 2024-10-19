@@ -1,10 +1,5 @@
-import { Metadata } from "next";
 import { data } from "@/utils/data";
 import { AboutMeCard } from "@/components/card";
-
-export const metadata: Metadata = {
-  title: "About Me",
-};
 
 const AboutMe = () => {
   const { aboutMe } = data;

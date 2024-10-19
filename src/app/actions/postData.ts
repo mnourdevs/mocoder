@@ -21,10 +21,12 @@ export const sendContact = async (state: ReducerInitialType) => {
     return data;
   } catch (error: any) {
     if (error.status === 404) throw new Error("NOT FOUND");
-    else if (error.status === 405) throw new Error("check internet connectivity") 
+    else if (error.status === 405)
+      throw new Error("check internet connectivity");
     else {
-    const err = await error.json();
-    console.log("request error ===> ", err)
-    throw err
+      const err = await error.json();
+      console.log("request error ===> ", err);
+      throw err;
+    }
   }
-}};
+};

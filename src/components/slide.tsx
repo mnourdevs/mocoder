@@ -4,7 +4,7 @@ import { ChildrenProps } from "@/utils/types";
 
 export const SlideRight = ({ children }: ChildrenProps) => {
   return (
-    <div className="sticky top-0">
+    <div >
       <motion.div
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
@@ -18,7 +18,7 @@ export const SlideRight = ({ children }: ChildrenProps) => {
 
 export const SlideDown = ({ children }: ChildrenProps) => {
   return (
-    <div className="sticky top-0 bg-white z-10">
+    <div className="sticky top-0 z-50">
       <motion.div
         initial={{ y: "-80vw" }}
         animate={{ y: 0 }}
