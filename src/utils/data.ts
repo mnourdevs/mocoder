@@ -43,7 +43,7 @@ export const data: DataProps = {
       href: "https://www.linkedin.com/in/mohammed-hassan-a5373b249/",
       src: linkedin,
     },
-    { name: "Email", href: "mailto:jnrnoureljalil@gmail.com", src: email },
+    { name: "Email", href: "mailto:mnourdevs@gmail.com", src: email },
     {
       name: "WhatsApp",
       href: `https://api.whatsapp.com/send?phone=0509447674&text=${whatsAppDefaultMessage}`,
@@ -61,10 +61,14 @@ export const data: DataProps = {
 
   home: {
     name: "Mohammed Nour",
-    job: "Fullstack Developer",
+    job: [
+      "Software Developer",
+      "Web Designer",
+      "High-performance Solutions",
+      "Performance-driven Applications",
+    ],
     content: [
-      "Crafting scalable applications & high-performance software solutions",
-      "Interested in collaboration or discussing product design?Let's connect!",
+      "discussing project design?Let's connect!",
     ],
   },
   aboutMe: [

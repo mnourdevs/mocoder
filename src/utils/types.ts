@@ -1,4 +1,3 @@
-import { useContactFormHandler } from "@/customHooks/useContactPage";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { StaticImageData } from "next/image";
 import { NextRequest, NextResponse } from "next/server";
@@ -28,7 +27,7 @@ export type DataProps = {
   connectSocial: NavType[];
   home: {
     name: string;
-    job: string;
+    job: string[];
     content: string[];
   };
   footer: {
