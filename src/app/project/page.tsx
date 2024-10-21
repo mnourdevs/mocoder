@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ProjectCard } from "@/components/card";
-import {data} from "@/utils/data"
+import {data} from "@/utils/constants/data"
 
 export const metadata:Metadata = {
   title: "Projects"

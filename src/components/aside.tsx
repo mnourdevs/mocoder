@@ -1,4 +1,4 @@
-import { data } from "@/utils/data";
+import { data } from "@/utils/constants/data";
 import Link from "next/link";
 import ImageHelper from "./imageHelper";
 import { ThemeToggler } from "./darkTheme";

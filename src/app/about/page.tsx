@@ -1,4 +1,4 @@
-import { data } from "@/utils/data";
+import { data } from "@/utils/constants/data";
 import { AboutMeCard } from "@/components/card";
 
 const AboutMe = () => {

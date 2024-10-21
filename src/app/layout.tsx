@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import AsideContactMe from "@/components/aside";
 import { Divider } from "antd";
 import { Provider } from "@/components/darkTheme";
-import { keywords } from "@/utils/data";
+import { keywords } from "@/utils/constants/data";
 
 export const metadata: Metadata = {
   title: {

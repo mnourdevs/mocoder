@@ -1,5 +1,5 @@
 "use client"
-import { data } from "@/utils/data";
+import { data } from "@/utils/constants/data";
 import { Typewriter } from "react-simple-typewriter";
 
 const Typist = () => {
