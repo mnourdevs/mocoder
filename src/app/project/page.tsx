@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 import { ProjectCard } from "@/components/card";
-import {data} from "@/utils/data"
+import { data } from "@/utils/constants/data";
 
-export const metadata:Metadata = {
-  title: "Projects"
-}
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 const ProjectsPage = () => {
-  
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <p className="tracking-widest text-center mb-4 text-gray-500 font-bold">

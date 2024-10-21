@@ -1,17 +1,17 @@
-import { DataProps } from "./types";
-import home from "../../public/images/home.png";
-import aboutme from "../../public/images/programmer(1).png";
-import project from "../../public/images/app-development.png";
-import github from "../../public/images/github.png";
-import linkedin from "../../public/images/linkedin.png";
-import email from "../../public/images/email(4).png";
-import email1 from "../../public/images/email.png";
-import whatsapp from "../../public/images/whatsapp.png";
-import whatsup from "../../public/images/whatsapp(1).png";
-import location from "../../public/images/placeholder.png";
-import phone from "../../public/images/phone-call.png";
-import contactme from "../../public/images/contactme.png";
-import netgh from "../../public/images/netgh.png"
+import { DataProps } from "@/utils/types";
+import home from "../../../public/images/home.png";
+import aboutme from "../../../public/images/programmer(1).png";
+import project from "../../../public/images/app-development.png";
+import github from "../../../public/images/github.png";
+import linkedin from "../../../public/images/linkedin.png";
+import email from "../../../public/images/email(4).png";
+import email1 from "../../../public/images/email.png";
+import whatsapp from "../../../public/images/whatsapp.png";
+import whatsup from "../../../public/images/whatsapp(1).png";
+import location from "../../../public/images/placeholder.png";
+import phone from "../../../public/images/phone-call.png";
+import contactme from "../../../public/images/contactme.png";
+import netgh from "../../../public/images/netgh.png"
 import {
   LaptopOutlined,
   BulbOutlined,

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { data } from "@/utils/data";
+import { data } from "@/utils/constants/data";
 import ImageHelper from "./imageHelper";
 
 const Footer = () => {

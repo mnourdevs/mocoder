@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/utils/data";
+import { BASE_URL } from "@/utils/constants/data";
 import { ReducerInitialType } from "@/utils/types";
 
 export const sendContact = async (state: ReducerInitialType) => {

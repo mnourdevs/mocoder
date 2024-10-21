@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useReducer, FormEvent, ChangeEvent } from "react";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { INITIAL_STATE, reducer } from "@/utils/reducers";
-import { ACTION_TRIGGERS } from "@/utils/data";
+import { ACTION_TRIGGERS } from "@/utils/constants/data";
 import { sendContact } from "@/app/actions/postData";
 import { Toaster } from "@/utils/toaster";
 import { UseContactFormReturnInterface } from "@/utils/types";

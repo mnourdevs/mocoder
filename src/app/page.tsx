@@ -3,7 +3,7 @@ import ImageHelper from "@/components/imageHelper";
 import Button from "@/components/button";
 import { SlideRight } from "@/components/slide";
 import software from "../../public/images/web-development(1).png";
-import { data } from "@/utils/data";
+import { data } from "@/utils/constants/data";
 import Underliner from "@/components/underliner";
 import Typist from "@/components/typewriter";
 

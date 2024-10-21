@@ -1,5 +1,5 @@
 import { ReducerActionType, ReducerInitialType } from "@/utils/types";
-import { ACTION_TRIGGERS } from "@/utils/data";
+import { ACTION_TRIGGERS } from "@/utils/constants/data";
 
 export const INITIAL_STATE: ReducerInitialType = {
   name: "",
