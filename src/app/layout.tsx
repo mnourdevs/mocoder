@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from '@next/font/google';
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { SlideDown, SlideUp } from "@/components/slide";
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 };
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '600', '800'], // Define which weights to use
+  subsets: ["latin"],
+  weight: ["400", "600", "800"],
 });
 export default function RootLayout({
   children,
@@ -31,8 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <body className={`flex flex-col h-screen relative dark:bg-black ${poppins.className}`}>
+      <body
+        className={`flex flex-col h-screen relative dark:bg-black ${poppins.className}`}
+      >
         <Provider>
           <div className="flex-1 relative">
             <SlideDown>

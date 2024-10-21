@@ -8,7 +8,7 @@ import Underliner from "@/components/underliner";
 import Typist from "@/components/typewriter";
 
 export default function Home() {
-  const { name, content } = data.home;
+  const { name } = data.home;
   return (
     <main>
       {/* introduction section */}
@@ -16,9 +16,9 @@ export default function Home() {
         <SlideRight>
           <div>
             {/* introduction-text */}
-            <div className="flex max-md:flex-col justify-center items-center p-3 gap-x-14">
+            <div className="flex max-md:flex-col justify-center items-center p-3 space-x-14">
               <div className="mb-3 md:mb-0 ">
-                <h1 className=" text-4xl capitalize text-blue-300">
+                <h1 className=" text-5xl capitalize text-sky-300 font-bold">
                   {name}.
                   <Underliner />
                 </h1>

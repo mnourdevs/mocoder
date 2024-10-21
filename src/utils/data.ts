@@ -11,6 +11,7 @@ import whatsup from "../../public/images/whatsapp(1).png";
 import location from "../../public/images/placeholder.png";
 import phone from "../../public/images/phone-call.png";
 import contactme from "../../public/images/contactme.png";
+import netgh from "../../public/images/netgh1.png"
 import {
   LaptopOutlined,
   BulbOutlined,
@@ -60,7 +61,7 @@ export const data: DataProps = {
   ],
 
   home: {
-    name: "Mohammed Nour",
+    name: "Mo Nour",
     job: [
       "Software Developer",
       "Web Designer",
@@ -119,6 +120,15 @@ export const data: DataProps = {
       src: email1,
     },
   ],
+  projects:[
+    {
+      title: "Netgh ~ A film template",
+      imageUrl: netgh,
+      liveUrl: "https://netgh.onrender.com/",
+      tags: ["Express", "EJS", "Node.js", "TS"]
+    },
+    // more projects...
+  ]
 };
 
 export const keywords: string[] = [

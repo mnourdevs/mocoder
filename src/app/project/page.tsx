@@ -1,17 +1,25 @@
 import { Metadata } from "next";
+import { ProjectCard } from "@/components/card";
+import {data} from "@/utils/data"
 
 export const metadata:Metadata = {
   title: "Projects"
 }
 
-const Project = () => {
-  return ( 
-    <div className="flex max-h-screen h-full items-center justify-center text-3xl  text-blue-500 dark:text-blue-300 max-sm:mt-2">
-      <p className="border p-3 rounded-logo animate-wiggle border-blue-500 dark:text-blue-300">
-        Coming Soon
+const ProjectsPage = () => {
+  
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <p className="tracking-widest text-center mb-4 text-gray-500 font-bold">
+        Latest Projects
       </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {data.projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+      </div>
     </div>
-   );
-}
- 
-export default Project;
+  );
+};
+
+export default ProjectsPage;

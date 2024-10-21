@@ -22,6 +22,14 @@ export type CardProps = {
   Icon: ElementType;
 };
 
+export interface ProjectProps {
+  title: string;
+  // description: string;
+  imageUrl: StaticImageData;
+  liveUrl: string;
+  // githubUrl: string;
+  tags: string[]; 
+}
 export type DataProps = {
   navigation: NavType[];
   connectSocial: NavType[];
@@ -37,6 +45,7 @@ export type DataProps = {
     src: StaticImageData;
   }[];
   aboutMe: CardProps[];
+  projects:ProjectProps[]
 };
 
 export type ChildrenProps = {
