@@ -11,7 +11,7 @@ import whatsup from "../../public/images/whatsapp(1).png";
 import location from "../../public/images/placeholder.png";
 import phone from "../../public/images/phone-call.png";
 import contactme from "../../public/images/contactme.png";
-import netgh from "../../public/images/netgh1.png"
+import netgh from "../../public/images/netgh.png"
 import {
   LaptopOutlined,
   BulbOutlined,
