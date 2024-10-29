@@ -11,7 +11,7 @@ const ProjectsPage = () => {
       <p className="tracking-widest text-center mb-4 text-gray-500 font-bold">
         Latest Projects
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-sm:ml-3">
         {data.projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

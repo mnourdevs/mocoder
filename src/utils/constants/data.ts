@@ -11,7 +11,9 @@ import whatsup from "../../../public/images/whatsapp(1).png";
 import location from "../../../public/images/placeholder.png";
 import phone from "../../../public/images/phone-call.png";
 import contactme from "../../../public/images/contactme.png";
-import netgh from "../../../public/images/netgh.jpg"
+import netgh from "../../../public/images/netgh.jpg";
+import inventory from "../../../public/images/inventory.jpeg";
+
 import {
   LaptopOutlined,
   BulbOutlined,
@@ -115,8 +117,8 @@ export const data: DataProps = {
     },
     {
       name: "Email Me",
-      body: "mnourcodes@gmail.com",
-      href: "mailto:mnourcodes@gmail.com",
+      body: "jnrnoureljalil@gmail.com",
+      href: "mailto:jnrnoureljalil@gmail.com",
       src: email1,
     },
   ],
@@ -127,6 +129,12 @@ export const data: DataProps = {
       liveUrl: "https://netgh.onrender.com/",
       tags: ["Express", "EJS", "Node.js", "TS"]
     },
+    {
+      title: "MyInventory ~ Web application",
+      liveUrl: "https://myinventory-gilt.vercel.app/",
+      tags: ["React"],
+      imageUrl: inventory
+    }
     // more projects...
   ]
 };
