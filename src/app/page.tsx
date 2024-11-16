@@ -12,37 +12,33 @@ export default function Home() {
   return (
     <main>
       {/* introduction section */}
-      <section className="flex justify-center items-center my-6 mx-12 ">
-        <SlideRight>
-          <div>
-            {/* introduction-text */}
-            <div className="flex max-md:flex-col justify-center items-center p-3 space-x-14">
-              <div className="mb-3 md:mb-0 ">
-                <h1 className=" text-5xl capitalize text-sky-300 font-bold">
-                  {name}.
-                  <Underliner />
-                </h1>
-                <span className="inline-block capitalize my-3 font-thin text-md text-gray-500">
-                  <Typist />
-                </span>
-                  <p
-                    className="text-gray-700 mb-2 dark:text-gray-400"
-                  >
-                    Discuss a project ? 
-                  </p>
-                <Button>
-                  <Link href={"/contact"}>Say hello</Link>
-                </Button>
+      <SlideRight>
+        <section className="flex justify-center items-center w-full md:mt-10 p-10 md:p-0">
+          {/* introduction-text */}
+          <div className="flex flex-col md:flex-row items-center justify-between max-w-xl w-full">
+            <div className="mb-3 md:mb-0 w-full basis-1/2 space-y-5">
+              <h1 className=" text-5xl capitalize text-sky-300 font-bold">
+                {name}.
+                <Underliner />
+              </h1>
+              <div className="capitalize my-3 font-thin text-md text-gray-500 whitespace-nowrap ">
+                <Typist />
               </div>
-              {/* introduction-image */}
-              <div>
-                <ImageHelper src={software} alt={`software=logo`} />
-              </div>
-              {/* soon to add-- years of experience, clients and completed projects */}
+              <p className="text-gray-700 mb-2 dark:text-gray-400">
+                Discuss a project ?
+              </p>
+              <Button>
+                <Link href={"/contact"}>Say hello</Link>
+              </Button>
             </div>
+            {/* introduction-image */}
+            <div className="w-full basis-1/2">
+              <ImageHelper src={software} alt={`software=logo`} />
+            </div>
+            {/* soon to add-- years of experience, clients and completed projects */}
           </div>
-        </SlideRight>
-      </section>
+        </section>
+      </SlideRight>
     </main>
   );
 }

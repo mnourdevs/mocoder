@@ -4,12 +4,14 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Typist = () => {
   return (
-    <Typewriter
-      words={data.home.job}
-      cursor={true}
-      cursorBlinking={true}
-      loop={false}
-    />
+    <div className="w-full">
+      <Typewriter
+        words={data.home.job}
+        cursor={true}
+        cursorBlinking={true}
+        loop={false}
+      />
+    </div>
   );
 };
 
