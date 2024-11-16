@@ -132,7 +132,7 @@ export const data: DataProps = {
     {
       title: "MyInventory ~ Web application",
       liveUrl: "https://myinventory-gilt.vercel.app/",
-      tags: ["React", "Django"],
+      tags: ["React", "Django", "RestApi"],
       imageUrl: inventory
     }
     // more projects...
