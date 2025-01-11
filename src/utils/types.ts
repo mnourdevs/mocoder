@@ -45,7 +45,8 @@ export type DataProps = {
     src: StaticImageData;
   }[];
   aboutMe: CardProps[];
-  projects:ProjectProps[]
+  projects:ProjectProps[];
+  teamProjects:ProjectProps[]
 };
 
 export type ChildrenProps = {

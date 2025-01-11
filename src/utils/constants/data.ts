@@ -13,6 +13,7 @@ import phone from "../../../public/images/phone-call.png";
 import contactme from "../../../public/images/contactme.png";
 import netgh from "../../../public/images/netgh.jpg";
 import inventory from "../../../public/images/inventory.jpeg";
+import ay24 from "../../../public/images/ay24serv.jpeg";
 
 import {
   LaptopOutlined,
@@ -134,6 +135,14 @@ export const data: DataProps = {
       liveUrl: "https://myinventory-gilt.vercel.app/",
       tags: ["React", "Django", "RestApi"],
       imageUrl: inventory
+    },
+  ],
+  teamProjects:[
+    {
+      title: "Ay24services ~ A voting platform",
+      imageUrl: ay24,
+      liveUrl: "https://www.ay24services.com/",
+      tags: ["Nextjs", "TS",]
     }
     // more projects...
   ]
